@@ -1,0 +1,33 @@
+.table-item {
+  border-bottom: '1px solid #000' !important;
+}
+.table-item p {
+  word-break: break-all;
+}
+.table-item__checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+.table-item__col--delete {
+  position: relative;
+  width: 70px;
+}
+.table-item__icon--delete {
+  font-size: 25px;
+  margin-right: 1rem;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+.table-item__icon--delete:hover {
+  color: #ff6b01;
+}
+.table-item:hover .table-item__icon--delete {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .table-item__icon--delete {
+    opacity: 0;
+  }
+}

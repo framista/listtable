@@ -1,10 +1,12 @@
 import React from 'react';
+import Table from '../../table';
+import { Container } from 'react-bootstrap';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Table</h1>
-    </div>
+    <Container className="mt-5">
+      <Table />
+    </Container>
   );
 };
 
