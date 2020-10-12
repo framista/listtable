@@ -2,11 +2,15 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import AppRouter from './routes/AppRouter';
+// import { Provider } from 'react-redux';
+// import store from './redux/store';
+
 function App() {
   return (
-    <div className="app">
-      <p>list</p>
-    </div>
+    // <Provider store={store}>
+      <AppRouter />
+    // </Provider>
   );
 }
 
