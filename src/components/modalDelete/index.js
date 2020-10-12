@@ -27,10 +27,13 @@ const ModalDelete = (props) => {
         <span className="font-italic">{name}</span>
       </h4>
       <div className="mt-5 d-flex justify-content-end">
-        <Button variant="danger" className="mr-4 px-5" onClick={onDelete}>
+        <Button
+          className="mr-4 px-5 task__btn task__btn--primary"
+          onClick={onDelete}
+        >
           Yes
         </Button>
-        <Button variant="light" className="px-5" onClick={onClose}>
+        <Button variant="light" className="task__btn" onClick={onClose}>
           No
         </Button>
       </div>

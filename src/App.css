@@ -10,3 +10,18 @@
   margin: 0;
   padding: 0;
 }
+
+.task__btn {
+  padding: 0.7em 1.5em;
+  width: 140px;
+}
+.task__btn--primary,
+.task__btn--primary:not(:disabled):not(.disabled):active,
+.task__btn--primary:focus {
+  background: #ff6b01;
+  color: #fff;
+  border: none;
+}
+.task__btn--primary:hover {
+  background: #d16d25;
+}
