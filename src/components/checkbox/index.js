@@ -3,7 +3,7 @@ import './style.css';
 import PropTypes from 'prop-types';
 
 const Checkbox = (props) => {
-  const { id, label, isChecked, onChange } = props;
+  const { id, isChecked, onChange } = props;
   return (
     <div className="checkbox">
       <input

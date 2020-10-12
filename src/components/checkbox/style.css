@@ -20,7 +20,7 @@
   width: 14px;
   height: 14px;
   border-radius: 2px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff6b01;
 }
 .checkbox input:checked + label::before {
   content: '\2713';
@@ -32,5 +32,5 @@
 }
 .checkbox label:hover::before,
 .checkbox input[type='checkbox']:hover + label::before {
-  border-color: #ff6b01;
+  background: #df9661;
 }
