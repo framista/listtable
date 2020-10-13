@@ -1,0 +1,7 @@
+.table-pagination {
+  border-bottom: 1px solid #ddd;
+}
+.table-pagination__content {
+  display: flex;
+  justify-content: flex-end;
+}

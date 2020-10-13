@@ -1,0 +1,15 @@
+.table-header__th {
+  display: flex;
+  align-items: center;
+}
+
+.table-header__p {
+  margin-bottom: 0px;
+  margin-right: 0.7rem;
+}
+
+.table-header__icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

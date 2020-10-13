@@ -1,6 +1,3 @@
-.table-item {
-  border-bottom: '1px solid #000' !important;
-}
 .table-item p {
   word-break: break-all;
 }
@@ -14,7 +11,7 @@
   width: 70px;
 }
 .table-item__icon--delete {
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 1rem;
   cursor: pointer;
   transform: translateY(-5px);

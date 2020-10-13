@@ -1,0 +1,9 @@
+.task__table {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.table__thead {
+  background: #222;
+  border: 1px solid #222;
+  color: #fff;
+}
