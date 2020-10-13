@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
 import { GrPrevious, GrNext } from 'react-icons/gr';
@@ -28,6 +28,12 @@ const TablePagination = (props) => {
       setTablePage(page + 1);
     }
   };
+  useEffect(() => {
+    if (startTaskNumber > endTaskNumber) {
+      setTablePage(page - 1);
+    }
+    //eslint-disable-next-line
+  }, [endTaskNumber]);
   return (
     <tr className="table-pagination">
       <td colSpan="4">

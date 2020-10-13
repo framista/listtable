@@ -4,6 +4,7 @@ import { Table } from 'react-bootstrap';
 import TableItem from '../tableItem';
 import TableHeader from '../tableHeader';
 import TablePagination from '../tablePagination';
+import TableNoData from '../tableNoData';
 import './style.css';
 import { setStartEndTaskForPage } from '../../utils/tableTask';
 
@@ -43,7 +44,7 @@ const TableElement = (props) => {
         {tasksToShow.map((task) => (
           <TableItem key={task.id} task={{ ...task }} />
         ))}
-        <TablePagination />
+        {tasks.length > 0 ? <TablePagination /> : <TableNoData />}
       </tbody>
     </Table>
   );
