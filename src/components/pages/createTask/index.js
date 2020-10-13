@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Container, Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
-import './style.css';
 import { addTask } from '../../../redux/tasks/actions';
 import { withRouter, Link } from 'react-router-dom';
 
