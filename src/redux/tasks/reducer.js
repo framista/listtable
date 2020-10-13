@@ -8,7 +8,6 @@ const reducer = (state = initialState, action) => {
     case TASK_DELETE:
       return state.filter(({ id }) => id !== action.payload);
     case TASK_TOOGLE_DONE:
-      console.log(action.payload);
       return state.map((task) => {
         task.done = task.id === action.payload ? !task.done : task.done;
         return task;

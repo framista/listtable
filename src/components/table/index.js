@@ -5,10 +5,17 @@ import TableItem from '../tableItem';
 import TableHeader from '../tableHeader';
 import TablePagination from '../tablePagination';
 import './style.css';
+import { setStartEndTaskForPage } from '../../utils/tableTask';
 
 const TableElement = (props) => {
-  const { tasks, order, orderBy, page } = props;
+  const { tasks, order, orderBy, page, rowsPerPage } = props;
   const [tasksToShow, setTasksToShow] = useState(tasks);
+
+  const { startTaskNumber, endTaskNumber } = setStartEndTaskForPage(
+    tasks.length,
+    page,
+    rowsPerPage
+  );
 
   useEffect(() => {
     const compareAsc = (a, b) => {
@@ -24,8 +31,8 @@ const TableElement = (props) => {
     if (order === 'asc') {
       tasks.reverse();
     }
-    setTasksToShow(tasks);
-  }, [order, orderBy, tasks]);
+    setTasksToShow(tasks.slice(startTaskNumber - 1, endTaskNumber));
+  }, [endTaskNumber, order, orderBy, startTaskNumber, tasks]);
 
   return (
     <Table responsive className="task__table">
@@ -47,6 +54,7 @@ const mapStateToProps = (state) => ({
   page: state.table.page,
   order: state.table.order,
   orderBy: state.table.orderBy,
+  rowsPerPage: state.table.rowsPerPage,
 });
 
 export default connect(mapStateToProps)(TableElement);
